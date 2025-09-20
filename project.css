@@ -1,0 +1,107 @@
+/* Gaya umum */
+body {
+    font-family: arial, sans-serif;
+    background: #187ea0;
+    color: #f1f1f1;
+    margin: 10px;
+}
+
+/* Container utama*/
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul utama*/
+h1 {
+    color: #0c0c0c;
+    text-align: center;
+}
+
+/* Garis pemisah*/
+hr {
+    border: none;
+    height: 3px;
+    background: #020405;
+    margin: 20px 0;
+}
+
+/* Subjudul*/
+h2 {
+    color: #0c0d0e;
+    margin-bottom: 14px;
+}
+
+/* Paragraf */
+p {
+    line-height: 1.6;
+}
+
+/* Foto */
+.Foto img {
+    display: block;
+    border-radius: 10%;
+}
+
+/* List hobi */
+.Hobi ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+.Hobi li {
+    margin-bottom: 5px;
+}
+
+/* Link */
+a {
+    color: #0a2bbd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid #070707;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 30%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background: #b5d2d3;
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100px;
+}
+
+button:hover {
+    background: #290ec5;
+}
