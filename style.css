@@ -1,0 +1,271 @@
+/* import font modern (poppins) - tambahkan di awal untuk load external font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* reset dan gaya umum - buat layout konsisten */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya umum */
+body {
+    font-family: 'poppins', arial, sans-serif;
+    background: linear-gradient(135deg, #187ea0 0%, #4facfe 100%);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+/* Container utama - card like dengan shadow modern */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Judul utama - center dengan animasi fade-in */
+h1 {
+    color: #0c0c0c;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+    -webkit-animation: fadeInDown 1s ease-out;
+}
+
+/* Garis pemisah - gradiant border */
+hr {
+    border: none;
+    height: 4px;
+    background: linear-gradient(to right, #187ea0, #4facfe);
+    margin: 30px 0;
+    border-radius: 2px;
+}
+/* Subjudul - bold dan spaced */
+h2 {
+    color: #0c0d0e;
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out o.2s both;
+    -webkit-animation: fadeInUp 1s ease-out o.2s both;
+}
+
+/* Paragraf - readable text */
+p {
+    line-height: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* section cards - setiap section seperti card modern */
+.about, .Foto, .Hobi, .Kontak, .Form {
+    background: rgba(255, 255, 255, 1);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3 ease, box-shadow 0.3s ease;
+}
+
+.about:hover, .Foto:hover, .Hobi:hover, .Kontak:hover, .Form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto section - modern image styling */
+.Foto img {
+    display: block;
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3 ease;
+}
+.Foto img:hover {
+    transform: scale(1.06);
+}
+
+/* List hobi - modern bullet dengan spacing */
+.Hobi ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.Hobi li {
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #187ea0, #4facfe);
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+    transition: background 0.3s ease;
+}
+
+.Hobi li:hover {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+/* Link - modern underline animation */
+a {
+    color: #0a2bbd;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500
+    
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2;
+    left: 0;
+    background: linear-gradient(to right, #187ea0, #4facfe);
+    transition: width 0.3s ease;
+}
+
+
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    color: #187ea0;
+}
+
+/* Form - modern flex layout dengan validation */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+input, textarea {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}    
+
+input:fokus, textarea:focus {
+    outline: none;
+    border-color: #187ea0;
+    box-shadow: 0 0 0 3px rgba(24, 126, 160, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background: linear-gradient(135deg, #187ea0, #4facfe);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    width: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(24, 126, 160, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* animasi keyframes - custom fade-in untuk modern feel */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* responsivitas - breakpoint untuk tablet dan mobile */
+@media ( max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 25px 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .about, .Foto, .Hobi, .Kontak, .Form {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) { /* mobile */
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    input, textarea, button {
+        font-size: 16px;
+    }
+    
+    .Foto img {
+        border-radius: 10px;
+    }
+}
